@@ -1,0 +1,46 @@
+
+  body,
+  html {
+      height: 100%;
+
+      margin: 0;
+  }
+
+  .bg {
+
+      background-image: url("try1.png");
+
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+  }
+
+  .bg1 {
+
+      background-image: url("bg1.jpg");
+
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+  }
+  .bg4 {
+
+background-image: url("try2.png");
+
+height: 100%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+  .bg2 {
+      background-color: rgba(0, 0, 0, 0.308);
+  }
+
+  .bg3 {
+      background-color: rgb(0, 0, 0);
+  }
