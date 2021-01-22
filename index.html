@@ -11,9 +11,7 @@
     <link href="style.css" type="text/css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="scripts.js"></script>
-    <style>
-
-    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -437,35 +435,36 @@
 
                 <div class="col-md-6 ">
                     <img src="contactme2.png" alt="" class="pl-5 img-fluid ">
-                    <form>
+                    
+                    <form id="submit-form" action="">
 
                         <div class="form-row pt-5">
                             <div class="form-group col-md-6 text-white">
-                                <label name="name1" for="inputName">Name</label>
-                                <input type="text" class="form-control" id="inputEmail4" placeholder="Enter your Name"
+                                <label name="name1" for="fname">Name</label>
+                                <input type="text" class="form-control" name="name" id="fname" placeholder="Enter your Name"
                                     required>
                             </div>
                             <div class="form-group col-md-6 text-white">
                                 <label for="inputPlace">Place</label>
-                                <input type="text" class="form-control" id="inputPassword4" placeholder="Place"
+                                <input type="text" class="form-control" name="place" id="inputPassword4" placeholder="Place"
                                     required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6 text-white">
-                                <label for="inputEmail">Email</label>
-                                <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+                                <label for="lname">Email</label>
+                                <input type="email" class="form-control" name="email" id="lname" placeholder="Email" required>
                             </div>
                             <div class="form-group col-md-6 text-white">
                                 <label for="inputPlace">Mobile</label>
-                                <input type="number" class="form-control" id="inputPassword4" placeholder="Mobile"
+                                <input type="number" class="form-control" name="mobile" id="inputplace" placeholder="Mobile"
                                     required>
                             </div>
                         </div>
 
                         <div class="form-group text-white">
-                            <label for="Comments">Message</label>
-                            <textarea class="form-control" cols="30" rows="10" id="" placeholder="your comments here"
+                            <label for="subject">Message</label>
+                            <textarea class="form-control" cols="30" name="message" rows="10" id="subject" placeholder="Write a message here.."
                                 required></textarea>
                         </div>
 
@@ -509,7 +508,25 @@
         </div>
 
     </section>
-
+    <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbzi3uh6chVod-bl38AxlRRh2K-nQCPE7MinsH9b/exec", //to be created from google sheet
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+                   // https://script.google.com/macros/s/AKfycbwo5Re-20rGt_iHuckTz5Kl8xtp7eOOi59D--GmVqO5ELGCPDVjYBIs/exec
+                }
+            })
+        })
+    </script>
 
 
 
