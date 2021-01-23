@@ -22,6 +22,7 @@
       background-image: url("bg1.jpg");
 
       height: 100%;
+      
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -29,7 +30,7 @@
   }
   .bg4 {
 
-background-image: url("try2.png");
+background-image: url("try15.jpg");
 
 height: 100%;
 background-position: center;
@@ -43,4 +44,62 @@ background-size: cover;
 
   .bg3 {
       background-color: rgb(0, 0, 0);
+  }
+  .bg5 {
+    background-color: rgb(0, 0, 0);
+}
+.bg6 {
+
+    background-image: url("try2.png");
+    
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    }
+
+
+
+
+
+
+.hover-2 .hover-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+  }
+  
+  .hover-2-title {
+    position:absolute;
+    
+    top: 40%;
+    left: 0;
+    text-align: center;
+    width:18rem;
+    z-index: inherit 1;
+    transition: all 0.3s;
+  }
+  
+  .hover-2-description {
+    width:18rem;
+    position: absolute;
+    top: 55%;
+    bottom: 0;
+    opacity: 0;
+    left: 0;
+    text-align: center;
+    z-index: inherit 1;
+    transition: all 0.3s;
+  }
+  
+  .hover-2:hover .hover-2-title {
+    transform: translateY(-1.5rem);
+  }
+  
+  .hover-2:hover .hover-2-description {
+    bottom: 0.5rem;
+    opacity: 1;
+  }
+  
+  .hover-2:hover .hover-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
   }
